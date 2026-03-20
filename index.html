@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celina Goodfellow Consultancy | Executive Communication Coaching</title>
+    <meta name="description" content="Executive Communication Coaching for Finance Professionals. Clarity. Authority. Confidence. Trusted by finance professionals across global financial centres.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --charcoal: #1d1d1d;
+            --gold: #c3a574;
+            --gold-light: #d4b896;
+            --grey: #6f6f6f;
+            --grey-light: #f8f7f5;
+            --border: #e8e4de;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo-circle {
+            width: 44px;
+            height: 44px;
+            border: 1.5px solid var(--charcoal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .nav-logo-circle::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: var(--charcoal) !important;
+            color: var(--white) !important;
+            padding: 10px 24px !important;
+            font-size: 12px !important;
+            letter-spacing: 0.1em !important;
+            transition: background 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold) !important;
+            color: var(--white) !important;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* HERO */
+        #hero {
+            padding-top: 172px;
+            padding-bottom: 120px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 300;
+            color: var(--gold);
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .hero-company {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .hero-name {
+            font-size: 13px;
+            font-weight: 300;
+            color: var(--grey);
+            letter-spacing: 0.05em;
+            margin-bottom: 40px;
+        }
+
+        .hero-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+        }
+
+        .hero-descriptor {
+            font-size: 14px;
+            color: var(--grey);
+            margin-bottom: 4px;
+            font-weight: 300;
+        }
+
+        .hero-credential {
+            font-size: 13px;
+            color: var(--charcoal);
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        .hero-trusted {
+            font-size: 12px;
+            color: var(--grey);
+            font-style: italic;
+            margin-bottom: 40px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-photo {
+            position: sticky;
+            top: 100px;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            border-radius: 50%;
+            display: block;
+            filter: grayscale(10%);
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 14px 36px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--charcoal);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            border: 1px solid var(--charcoal);
+            color: var(--charcoal);
+            padding: 13px 36px;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-left: 16px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        /* DIVIDER */
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        /* SECTION LABELS */
+        .section-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+        }
+
+        /* THE PROBLEM */
+        #problem {
+            background: var(--grey-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .problem-text p {
+            font-size: 15px;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .problem-text p:last-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--charcoal);
+            border-left: 2px solid var(--gold);
+            padding-left: 24px;
+            margin-top: 32px;
+            line-height: 1.5;
+        }
+
+        /* WHAT CHANGES */
+        #changes {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .changes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .changes-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .changes-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--charcoal);
+        }
+
+        .changes-list li:last-child {
+            border-bottom: none;
+        }
+
+        .changes-list li::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+            margin-top: 12px;
+            flex-shrink: 0;
+        }
+
+        .changes-intro {
+            font-size: 15px;
+            color: var(--grey);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        /* WHO THIS IS FOR */
+        #who {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        #who .section-label {
+            color: var(--gold);
+        }
+
+        #who .section-title {
+            color: var(--white);
+        }
+
+        .who-text {
+            font-size: 15px;
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* WORK WITH ME */
+        #work {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .programmes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            margin-top: 48px;
+            border: 1px solid var(--border);
+        }
+
+        .programme {
+            padding: 40px;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        .programme:hover {
+            background: var(--grey-light);
+        }
+
+        .programme-duration {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .programme-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .programme-desc {
+            font-size: 13px;
+            color: var(--grey);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .programme-for {
+            font-size: 12px;
+            color: var(--charcoal);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .work-footer {
+            margin-top: 48px;
+            padding: 40px;
+            background: var(--grey-light);
+            border: 1px solid var(--border);
+        }
+
+        .work-footer p {
+            font-size: 14px;
+            color: var(--grey);
+            margin-bottom: 16px;
+        }
+
+        .work-footer-org {
+            font-size: 13px;
+            color: var(--grey);
+            font-style: italic;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* TESTIMONIALS */
+        #testimonials {
+            background: var(--grey-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;
+            margin-top: 48px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: var(--gold);
+            line-height: 0.8;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--charcoal);
+            text-transform: uppercase;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--gold);
+            margin-top: 4px;
+        }
+
+        .testimonials-note {
+            margin-top: 32px;
+            font-size: 12px;
+            color: var(--grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* ABOUT */
+        #about {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 14px;
+            color: var(--charcoal);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about-closing {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px !important;
+            font-style: italic;
+            color: var(--charcoal) !important;
+            border-left: 2px solid var(--gold);
+            padding-left: 24px !important;
+            margin-top: 32px;
+        }
+
+        .credentials {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .credentials-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .credentials-list {
+            list-style: none;
+        }
+
+        .credentials-list li {
+            font-size: 13px;
+            color: var(--charcoal);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .credentials-list li::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .about-approach {
+            background: var(--grey-light);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .approach-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .approach-text {
+            font-size: 14px;
+            color: var(--grey);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* CTA SECTION */
+        #cta {
+            background: var(--charcoal);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #cta .section-label {
+            color: var(--gold);
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .cta-subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            max-width: 480px;
+            margin: 0 auto 48px;
+            line-height: 1.8;
+        }
+
+        .cta-email {
+            margin-top: 24px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .cta-email a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: var(--grey);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--grey);
+        }
+
+        /* FADE IN ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 72px 0;
+            }
+
+            .hero-grid,
+            .problem-grid,
+            .changes-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-photo {
+                position: static;
+                max-width: 200px;
+                order: -1;
+            }
+
+            .hero-tagline {
+                font-size: 36px;
+            }
+
+            .hero-headline {
+                font-size: 30px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .programmes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-title {
+                font-size: 32px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#hero" class="nav-logo">
+            <div class="nav-logo-circle">CGC</div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work with Me</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#cta" class="nav-cta">Book Voice Audit</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content fade-in">
+                    <p class="hero-company">Celina Goodfellow Consultancy</p>
+                    <p class="hero-name">Celina Goodfellow — Executive Communication Coach</p>
+                    <h1 class="hero-tagline">Clarity.<br>Authority.<br>Confidence.</h1>
+                    <div class="gold-line"></div>
+                    <h2 class="hero-headline">You have the expertise.<br>Now make it land.</h2>
+                    <p class="hero-descriptor">Executive Communication Coaching for Finance Professionals.</p>
+                    <p class="hero-credential">Ex-Lloyds Bank Corporate Markets</p>
+                    <p class="hero-trusted">Trusted by finance professionals across global financial centres — London, the GCC and Asia Pacific.</p>
+                    <a href="https://calendly.com/hello-celinagoodfellowconsultancy/free-voice-audit" class="btn-primary" target="_blank">Book Your Free Voice Audit</a>
+                </div>
+                <div class="hero-photo fade-in" style="transition-delay: 0.2s;">
+                    <img src="profile.jpg" alt="Celina Goodfellow — Executive Communication Coach">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section id="problem">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="fade-in">
+                    <p class="section-label">The Problem</p>
+                    <h2 class="section-title">The problem I keep seeing.</h2>
+                    <div class="gold-line"></div>
+                </div>
+                <div class="problem-text fade-in" style="transition-delay: 0.15s;">
+                    <p>When I worked in Capital Markets at Lloyds Bank Corporate Markets in London, I watched something happen repeatedly.</p>
+                    <p>Brilliant professionals — people who knew their numbers inside out, whose analysis was sharp and whose judgement was sound — would lose the room.</p>
+                    <p>Not in obvious ways. Not through ignorance or nerves. They lost it in the gap between what they knew and how they delivered it.</p>
+                    <p>An investor call where the message softened under scrutiny. A board meeting where a strong recommendation failed to land. A cross-border presentation where clarity dissolved under pressure.</p>
+                    <p>The expertise was there. The communication didn't hold up.</p>
+                    <p>That gap is what I work on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT CHANGES -->
+    <section id="changes">
+        <div class="container">
+            <div class="changes-grid">
+                <div class="fade-in">
+                    <p class="section-label">What Changes</p>
+                    <h2 class="section-title">What changes in 5–10 weeks.</h2>
+                    <div class="gold-line"></div>
+                    <p class="changes-intro">Targeted coaching built around real finance situations — not generic advice. Here's what shifts.</p>
+                    <a href="https://calendly.com/hello-celinagoodfellowconsultancy/free-voice-audit" class="btn-primary" target="_blank">Book Your Free Voice Audit</a>
+                </div>
+                <div class="fade-in" style="transition-delay: 0.15s;">
+                    <ul class="changes-list">
+                        <li>Explain complex ideas clearly and decisively</li>
+                        <li>Speak with authority in cross-border calls</li>
+                        <li>Sound calm and credible under pressure</li>
+                        <li>Lead conversations instead of translating in your head</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section id="who">
+        <div class="container">
+            <p class="section-label fade-in">Who This Is For</p>
+            <h2 class="section-title fade-in" style="color: var(--white); max-width: 700px;">Finance professionals — Analysts to MDs.</h2>
+            <p class="who-text fade-in">Across Investment Banking, Corporate Finance, Private Equity, FP&amp;A, and Capital Markets. If English performance directly affects your credibility, influence, and progression — this work is for you.</p>
+        </div>
+    </section>
+
+    <!-- WORK WITH ME -->
+    <section id="work">
+        <div class="container">
+            <p class="section-label fade-in">Work with Me</p>
+            <h2 class="section-title fade-in">Boardroom-ready communication.<br>In 5–10 weeks.</h2>
+            <p class="changes-intro fade-in" style="max-width: 600px;">Every programme is tailored to your role, your industry, and the specific situations where your communication needs to hold up.</p>
+
+            <div class="programmes-grid fade-in">
+                <div class="programme">
+                    <p class="programme-duration">5 Weeks</p>
+                    <h3 class="programme-title">Boardroom Sprint</h3>
+                    <p class="programme-desc">Fast, high-impact preparation for boards, investment committee meetings and investor presentations.</p>
+                    <p class="programme-for">For senior professionals with an imminent high-stakes event who need to be ready — not eventually, but now.</p>
+                </div>
+                <div class="programme">
+                    <p class="programme-duration">10 Weeks</p>
+                    <h3 class="programme-title">Finance English Accelerator</h3>
+                    <p class="programme-desc">A full transformation in clarity, authority and communication confidence.</p>
+                    <p class="programme-for">For professionals preparing for leadership roles, deal-critical responsibilities, or cross-border positions where English performance directly affects credibility and progression.</p>
+                </div>
+                <div class="programme">
+                    <p class="programme-duration">4 Weeks</p>
+                    <h3 class="programme-title">Analyst Deck & Speak</h3>
+                    <p class="programme-desc">Clearer slides, sharper message flow, confident delivery.</p>
+                    <p class="programme-for">For analysts and associates who need to present complex financial information simply — and be taken seriously in the room when they do.</p>
+                </div>
+                <div class="programme">
+                    <p class="programme-duration">Single Session — 30 Minutes</p>
+                    <h3 class="programme-title">Pitch & Presentation Teardown</h3>
+                    <p class="programme-desc">A focused review of your deck or script with detailed, annotated feedback.</p>
+                    <p class="programme-for">For professionals who need an expert eye on a specific presentation before it matters.</p>
+                </div>
+            </div>
+
+            <div class="work-footer fade-in">
+                <p>Not sure which programme is right for you? Start with a free 10-minute Voice Audit — I'll identify exactly where your delivery is losing impact and recommend the right next step. No obligation. No sales pitch.</p>
+                <a href="https://calendly.com/hello-celinagoodfellowconsultancy/free-voice-audit" class="btn-primary" target="_blank">Book Your Free Voice Audit</a>
+                <p class="work-footer-org">For organisations enquiring about group coaching, team workshops, or bespoke programmes — please email directly and I will respond within 48 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <p class="section-label fade-in">What Clients Say</p>
+            <h2 class="section-title fade-in">Trusted by finance professionals across global financial centres — London, the GCC and Asia Pacific.</h2>
+
+            <div class="testimonials-grid fade-in">
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Celina's corporate finance background immediately built trust. She designed a short, targeted programme that helped me communicate with clarity, diplomacy, and authority. The improvement in how I influenced senior discussions was clear and immediate.</p>
+                    <p class="testimonial-author">Senior Capital Markets Professional</p>
+                    <p class="testimonial-role">Credit & Fixed Income — Dubai</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Tailored, practical, and focused on real finance situations. The impact on how clearly and confidently I communicated in meetings was noticeable.</p>
+                    <p class="testimonial-author">Senior Private Banking Professional</p>
+                    <p class="testimonial-role">Geneva</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">By Week 4 I was leading our regional finance call — confidently, in English.</p>
+                    <p class="testimonial-author">Finance Manager</p>
+                    <p class="testimonial-role">Riyadh</p>
+                </div>
+            </div>
+            <p class="testimonials-note fade-in">Names and identifying details withheld at client request. Finance professionals value discretion. So do I.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="fade-in">
+                    <p class="section-label">About Celina</p>
+                    <h2 class="section-title">I work from both sides of the table.</h2>
+                    <div class="gold-line"></div>
+                    <div class="about-text">
+                        <p>I spent five years inside Capital Markets at Lloyds Bank Corporate Markets, coordinating international investor roadshows and working alongside senior finance professionals across global markets. I saw first-hand how financial communication works under real pressure — the language of investor scrutiny, the structure of high-stakes decisions, the difference between a presentation that moves a room and one that doesn't.</p>
+                        <p>After Lloyds, I spent over a decade in education, training as a teacher and working in some of London's most demanding classrooms. That experience gave me something most communication coaches don't have — a deep understanding of how people actually learn, change their habits, and build new skills under pressure.</p>
+                        <p>I bring both worlds into my coaching. Finance gives me the context. Teaching gives me the method.</p>
+                        <p class="about-closing">My clients don't just communicate better. They build a voice that earns attention and holds a room.</p>
+                    </div>
+
+                    <div class="credentials">
+                        <p class="credentials-label">Credentials</p>
+                        <ul class="credentials-list">
+                            <li>Ex-Capital Markets EA · Lloyds Bank Corporate Markets, London</li>
+                            <li>Clients across IB, Corporate Finance, Private Equity, FP&amp;A and Capital Markets</li>
+                            <li>PGCE (Goldsmiths, University of London)</li>
+                            <li>220-Hour TEFL Business English certified</li>
+                            <li>12+ years teaching and professional development experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fade-in" style="transition-delay: 0.15s;">
+                    <div class="about-approach">
+                        <h3 class="approach-title">Communication isn't a skill to polish. It's a pattern to change.</h3>
+                        <p class="approach-text">Most communication training focuses on techniques — what to say, how to structure a presentation, tips for speaking clearly. That's not what I do.</p>
+                        <p class="approach-text">I work on the underlying patterns that determine how you show up under pressure. The habits that cause over-explanation. The instincts that soften a message at the moment it needs to be direct. The gap between how you think and how the room receives you.</p>
+                        <p class="approach-text">That's why the results are lasting — not just for the next presentation, but for every high-stakes moment that follows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta">
+        <div class="container">
+            <p class="section-label fade-in">Start Here</p>
+            <h2 class="cta-title fade-in">Book your free<br>Voice Audit.</h2>
+            <p class="cta-subtitle fade-in">I'll pinpoint exactly where your impact is being lost — and what to adjust first. No obligation. No sales pitch. Just a clear, honest assessment.</p>
+            <a href="https://calendly.com/hello-celinagoodfellowconsultancy/free-voice-audit" class="btn-primary fade-in" target="_blank" style="background: var(--gold);">Book Your Free Voice Audit</a>
+            <p class="cta-email fade-in">Or email: <a href="mailto:hello@celinagoodfellowconsultancy.com">hello@celinagoodfellowconsultancy.com</a></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-brand">Celina Goodfellow Consultancy</p>
+                <ul class="footer-links">
+                    <li><a href="mailto:hello@celinagoodfellowconsultancy.com">hello@celinagoodfellowconsultancy.com</a></li>
+                    <li><a href="https://linkedin.com/in/celinagoodfellow" target="_blank">LinkedIn</a></li>
+                </ul>
+                <p class="footer-copy">© 2026 Celina Goodfellow Consultancy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fade in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
