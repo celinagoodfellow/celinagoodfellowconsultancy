@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Payhip -->
+    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
     <style>
         :root {
             --white: #ffffff;
@@ -452,6 +454,86 @@
             line-height: 1.6;
         }
 
+        /* SOUND MORE SENIOR — standalone product card */
+        .programme-featured {
+            grid-column: 1 / -1;
+            background: var(--charcoal);
+            border: 1px solid var(--charcoal);
+            padding: 40px;
+            transition: background 0.2s;
+        }
+
+        .programme-featured:hover {
+            background: #2a2a2a;
+        }
+
+        .programme-featured .programme-duration {
+            color: var(--gold);
+        }
+
+        .programme-featured .programme-title {
+            color: var(--white);
+            font-size: 28px;
+        }
+
+        .programme-featured .programme-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            max-width: 620px;
+        }
+
+        .programme-featured .programme-for {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .programme-featured-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .programme-featured-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--gold);
+            margin-top: 20px;
+            white-space: nowrap;
+        }
+
+        .programme-featured-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Override Payhip button to match site style */
+        a.payhip-buy-button {
+            display: inline-block !important;
+            background: var(--gold) !important;
+            color: var(--white) !important;
+            padding: 14px 36px !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.1em !important;
+            text-transform: uppercase !important;
+            text-decoration: none !important;
+            transition: background 0.2s, transform 0.2s !important;
+            border: none !important;
+            cursor: pointer !important;
+            border-radius: 0 !important;
+        }
+
+        a.payhip-buy-button:hover {
+            background: var(--gold-light) !important;
+            transform: translateY(-1px) !important;
+        }
+
         .work-footer {
             margin-top: 48px;
             padding: 40px;
@@ -765,6 +847,19 @@
                 grid-template-columns: 1fr;
             }
 
+            .programme-featured {
+                grid-column: 1;
+            }
+
+            .programme-featured-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .programme-featured-cta {
+                align-items: flex-start;
+            }
+
             .cta-title {
                 font-size: 32px;
             }
@@ -889,13 +984,30 @@
                 </div>
                 <div class="programme">
                     <p class="programme-duration">4 Weeks</p>
-                    <h3 class="programme-title">Analyst Deck & Speak</h3>
+                    <h3 class="programme-title">Analyst Deck &amp; Speak</h3>
                     <p class="programme-desc">Clearer slides, sharper message flow, confident delivery.</p>
                     <p class="programme-for">For analysts and associates who need to present complex financial information simply — and be taken seriously in the room when they do.</p>
                 </div>
+
+                <!-- SOUND MORE SENIOR — Self-paced programme -->
+                <div class="programme programme-featured">
+                    <div class="programme-featured-inner">
+                        <div>
+                            <p class="programme-duration">Self-Paced · 4 Modules</p>
+                            <h3 class="programme-title">Sound More Senior in Finance Meetings</h3>
+                            <p class="programme-desc">You have the analysis. This programme gives you the delivery that makes it land — four self-paced modules, built for finance.</p>
+                            <p class="programme-for">For analysts and associates ready to close the gap between what they know and how the room receives them.</p>
+                            <p class="programme-featured-price">£249</p>
+                        </div>
+                        <div class="programme-featured-cta">
+                            <a href="https://payhip.com/b/ioEmT" class="payhip-buy-button" data-theme="none" data-product="ioEmT">Get Instant Access</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="programme">
                     <p class="programme-duration">Single Session — 30 Minutes</p>
-                    <h3 class="programme-title">Pitch & Presentation Teardown</h3>
+                    <h3 class="programme-title">Pitch &amp; Presentation Teardown</h3>
                     <p class="programme-desc">A focused review of your deck or script with detailed, annotated feedback.</p>
                     <p class="programme-for">For professionals who need an expert eye on a specific presentation before it matters.</p>
                 </div>
@@ -920,7 +1032,7 @@
                     <div class="testimonial-quote">"</div>
                     <p class="testimonial-text">Celina's corporate finance background immediately built trust. She designed a short, targeted programme that helped me communicate with clarity, diplomacy, and authority. The improvement in how I influenced senior discussions was clear and immediate.</p>
                     <p class="testimonial-author">Senior Capital Markets Professional</p>
-                    <p class="testimonial-role">Credit & Fixed Income — Dubai</p>
+                    <p class="testimonial-role">Credit &amp; Fixed Income — Dubai</p>
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-quote">"</div>
