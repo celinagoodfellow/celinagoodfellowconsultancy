@@ -952,6 +952,18 @@
                 gap: 24px;
                 text-align: center;
             }
+                        .client-logos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+            .client-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            justify-items: center;
+            gap: 2.5rem 2rem;
+            max-width: 780px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -996,7 +1008,7 @@
 <section id="clients" style="padding: 2rem 1.5rem; border-top: 1px solid #e8e0d4; border-bottom: 1px solid #e8e0d4; background: #ffffff;">
   <div style="max-width: 860px; margin: 0 auto; text-align: center;">
     <p style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7e6e; margin-bottom: 1.2rem;">Self-funded clients from</p>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem 2.5rem;">
+    <div class="client-logos-grid">
         <img src="goldman-sachs.svg" alt="Goldman Sachs" style="height: 24px; width: auto;">       <img src="jpmorgan.svg" alt="J.P. Morgan" style="height: 24px; width: auto;">
       <img src="Citi.svg" alt="Citi" style="height: 28px; width: auto;">
       <img src="Barclays.svg" alt="Barclays" style="height: 20px; width: auto;">
