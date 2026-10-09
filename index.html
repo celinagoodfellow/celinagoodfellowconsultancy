@@ -639,9 +639,15 @@
 
         .testimonials-grid {
             display: grid;
-               grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2px;
             margin-top: 48px;
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         .testimonial {
@@ -1184,21 +1190,33 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-quote">"</div>
-                   <p class="testimonial-text">After just three sessions, I already feel more confident speaking in meetings and delivering presentations. I now have a clear framework for structuring my thoughts and communicating my answers more effectively, particularly when responding on the spot.</p>
-                     <p class="testimonial-author">Legal Entity Controller</p>
-                   <p class="testimonial-role">London</p>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">Before working with Celina, I tended to rely on experience and subject matter knowledge to carry conversations. The coaching gave me a set of practical frameworks that changed how I structure updates, handle pushback and lead discussions. Simple, memorable and immediately applicable in real-world situations.</p> 
+                    <p class="testimonial-text">Before working with Celina, I tended to rely on experience and subject matter knowledge to carry conversations. The coaching gave me a set of practical frameworks that changed how I structure updates, handle pushback and lead discussions. Simple, memorable and immediately applicable in real-world situations.</p>
                     <p class="testimonial-author">Director, M&A</p>
                     <p class="testimonial-role">Singapore</p>
                 </div>
-                                <div class="testimonial">
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Since completing the programme with Celina, I have far more headspace when I'm communicating. Having a clear judgement ready keeps things simple and gives me time to think. I start well, I stay composed, and I'm no longer rushing to fill the space.</p>
+                    <p class="testimonial-author">Director, Asset Finance</p>
+                    <p class="testimonial-role">London</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Working with Celina has made a real difference to how I communicate, particularly under pressure and in high-stakes situations. We worked through realistic scenarios, and I left each session with tools I could immediately apply. I would highly recommend Celina to finance professionals looking to strengthen their communication and executive presence.</p>
+                    <p class="testimonial-author">Finance Director</p>
+                    <p class="testimonial-role">Norway</p>
+                </div>
+                <div class="testimonial">
                     <div class="testimonial-quote">"</div>
                     <p class="testimonial-text">Celina's approach has been genuinely valuable in strengthening how I communicate financial insights. The sessions were well structured and grounded in real-world business scenarios, and I've since been able to make financial discussions more focused and meaningful for my audience — putting these lessons into practice in my role.</p>
                     <p class="testimonial-author">Equity Investment Professional</p>
                     <p class="testimonial-role">New York</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">After just three sessions, I already feel more confident speaking in meetings and delivering presentations. I now have a clear framework for structuring my thoughts and communicating my answers more effectively, particularly when responding on the spot.</p>
+                    <p class="testimonial-author">Legal Entity Controller</p>
+                    <p class="testimonial-role">London</p>
                 </div>
             </div>
             <p class="testimonials-note fade-in">Names and identifying details withheld at client request. Finance professionals value discretion. So do I.</p>
