@@ -1255,3 +1255,146 @@ nav.menu-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
         grid-template-columns: 1fr;
     }
 }
+
+/* FAQ */
+.faq-list {
+    max-width: 820px;
+    margin-top: 16px;
+}
+
+.faq-item {
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+    padding-top: 0;
+}
+
+.faq-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer a {
+    color: var(--charcoal);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+}
+
+.faq-answer a:hover {
+    color: var(--gold);
+}
+
+/* All essays list (Writing page) */
+.essay-list {
+    list-style: none;
+    margin-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.essay-list li {
+    border-bottom: 1px solid var(--border);
+}
+
+.essay-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 32px;
+    padding: 20px 0;
+    text-decoration: none;
+    color: var(--charcoal);
+    transition: color 0.2s;
+}
+
+.essay-list a:hover {
+    color: var(--gold);
+}
+
+.essay-date {
+    flex-shrink: 0;
+    width: 110px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.essay-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.essay-tag {
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--grey);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 22px;
+    }
+
+    .essay-list a {
+        flex-wrap: wrap;
+        gap: 6px 16px;
+    }
+
+    .essay-date {
+        width: auto;
+    }
+
+    .essay-title {
+        flex-basis: 100%;
+        order: 2;
+    }
+}
+
+/* Footer spacing with five links */
+.footer-inner {
+    gap: 32px;
+}
+
+.footer-links {
+    gap: 24px;
+}
+
+.footer-links a {
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 24px;
+    }
+}
