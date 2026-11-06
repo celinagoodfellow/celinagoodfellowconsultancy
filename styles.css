@@ -1432,3 +1432,25 @@ nav.menu-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
         grid-column: 1;
     }
 }
+
+/* Tablet widths: keep the top menu on one line */
+@media (max-width: 1000px) and (min-width: 769px) {
+    nav {
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+    }
+
+    .nav-cta {
+        padding: 10px 14px !important;
+        font-size: 11px !important;
+    }
+}
