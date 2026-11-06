@@ -1398,3 +1398,37 @@ nav.menu-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
         gap: 12px 24px;
     }
 }
+
+/* Full-width programme card (Interview Intensive) */
+.programme-wide {
+    grid-column: 1 / -1;
+    background: var(--grey-light);
+}
+
+.programme-wide:hover {
+    background: #f1efeb;
+}
+
+/* Lists and text inside dark sections */
+.section-dark .changes-list li {
+    color: rgba(255,255,255,0.85);
+    border-bottom-color: rgba(255,255,255,0.12);
+}
+
+.section-dark .dark-note {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.section-dark .dark-note a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .programme-wide {
+        grid-column: 1;
+    }
+}
