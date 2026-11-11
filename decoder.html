@@ -377,24 +377,24 @@
                             <span class="decoder-step-num">1</span>
                             <legend class="decoder-step-title">What happened?</legend>
                         </div>
-                        <p class="decoder-step-hint">Pick up to two.</p>
+                        <p class="decoder-step-hint">Pick up to two from each section.</p>
 
                         <p class="decoder-group-label">What they said</p>
                         <div class="decoder-options">
-                            <div class="decoder-option"><input type="checkbox" id="o-punch" name="feedback" value="punch"><label for="o-punch">"You need more punch"</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-granular" name="feedback" value="granular"><label for="o-granular">"Too granular, zoom out"</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-presentation" name="feedback" value="presentation"><label for="o-presentation">"Work on your presentation skills"</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-toolong" name="feedback" value="toolong"><label for="o-toolong">"That took too long"</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-speakup" name="feedback" value="speakup"><label for="o-speakup">"Speak up more"</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-experience" name="feedback" value="experience"><label for="o-experience">"Your experience didn't come across"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-punch" name="feedback" value="punch" data-group="said"><label for="o-punch">"You need more punch"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-granular" name="feedback" value="granular" data-group="said"><label for="o-granular">"Too granular, zoom out"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-presentation" name="feedback" value="presentation" data-group="said"><label for="o-presentation">"Work on your presentation skills"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-toolong" name="feedback" value="toolong" data-group="said"><label for="o-toolong">"That took too long"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-speakup" name="feedback" value="speakup" data-group="said"><label for="o-speakup">"Speak up more"</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-experience" name="feedback" value="experience" data-group="said"><label for="o-experience">"Your experience didn't come across"</label></div>
                         </div>
 
                         <p class="decoder-group-label">What happened</p>
                         <div class="decoder-options">
-                            <div class="decoder-option"><input type="checkbox" id="o-finished" name="feedback" value="finished"><label for="o-finished">Someone senior finished my point</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-accent" name="feedback" value="accent"><label for="o-accent">I think it's my English or accent</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-newrole" name="feedback" value="newrole"><label for="o-newrole">New role or promotion round coming up</label></div>
-                            <div class="decoder-option"><input type="checkbox" id="o-other" name="feedback" value="other"><label for="o-other">Something else</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-finished" name="feedback" value="finished" data-group="happened"><label for="o-finished">Someone senior finished my point</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-accent" name="feedback" value="accent" data-group="happened"><label for="o-accent">I think it's my English or accent</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-newrole" name="feedback" value="newrole" data-group="happened"><label for="o-newrole">New role or promotion round coming up</label></div>
+                            <div class="decoder-option"><input type="checkbox" id="o-other" name="feedback" value="other" data-group="happened"><label for="o-other">Something else</label></div>
                         </div>
 
                         <div class="decoder-other-box" id="other-box">
@@ -568,10 +568,13 @@
         const levelLineEl = document.getElementById('decoder-level-line');
         const button = document.getElementById('decode-btn');
 
-        // Limit step 1 to two choices, and show the text box for "Something else"
+        // Limit step 1 to two choices per section, and show the text box for "Something else"
         function updateChoices() {
-            const checked = feedbackBoxes.filter(b => b.checked);
-            feedbackBoxes.forEach(b => { b.disabled = !b.checked && checked.length >= 2; });
+            ['said', 'happened'].forEach(group => {
+                const boxes = feedbackBoxes.filter(b => b.dataset.group === group);
+                const checked = boxes.filter(b => b.checked).length;
+                boxes.forEach(b => { b.disabled = !b.checked && checked >= 2; });
+            });
             otherBox.classList.toggle('show', document.getElementById('o-other').checked);
         }
         feedbackBoxes.forEach(b => b.addEventListener('change', updateChoices));
