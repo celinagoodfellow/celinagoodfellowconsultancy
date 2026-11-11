@@ -1434,7 +1434,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 }
 
 /* Tablet widths: keep the top menu on one line */
-@media (max-width: 1000px) and (min-width: 769px) {
+@media (max-width: 1160px) and (min-width: 769px) {
     nav {
         padding: 0 24px;
     }
@@ -1452,5 +1452,47 @@ nav.menu-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
     .nav-cta {
         padding: 10px 14px !important;
         font-size: 11px !important;
+    }
+}
+
+/* FEEDBACK DECODER BAND (homepage) */
+.decoder-band {
+    padding: 56px 0;
+    background: var(--grey-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.decoder-band-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.decoder-band-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.decoder-band-text {
+    font-size: 14px;
+    color: var(--grey);
+    max-width: 560px;
+}
+
+@media (max-width: 768px) {
+    .decoder-band { padding: 48px 0; }
+    .decoder-band-title { font-size: 24px; }
+}
+
+/* Narrow tablets: tighter menu spacing so all items fit on one line */
+@media (max-width: 900px) and (min-width: 769px) {
+    .nav-links {
+        gap: 12px;
     }
 }
