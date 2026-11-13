@@ -469,6 +469,29 @@
     </footer>
 
     <script>
+        // ---------- VISIT SOURCE ----------
+        // Reads ?src= (or ?utm_source=) from the short links, keeps it for this visit,
+        // then tidies the address bar so visitors only see /decoder.
+        const visitSource = (function () {
+            let src = '';
+            try {
+                const url = new URL(window.location.href);
+                const raw = url.searchParams.get('src') || url.searchParams.get('utm_source') || '';
+                src = raw.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 50);
+                if (src) {
+                    try { sessionStorage.setItem('decoder_source', src); } catch (e) {}
+                } else {
+                    try { src = sessionStorage.getItem('decoder_source') || ''; } catch (e) {}
+                }
+                if (url.searchParams.has('src') || url.searchParams.has('utm_source')) {
+                    url.searchParams.delete('src');
+                    url.searchParams.delete('utm_source');
+                    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+                }
+            } catch (e) {}
+            return src || 'direct';
+        })();
+
         // ---------- KIT SETTINGS ----------
         // Paste your Kit form ID here (the number in your Kit form's embed code).
         // While it says REPLACE_ME, the page still works but no emails are saved.
@@ -609,6 +632,7 @@
             data.append('fields[decoder_feedback]', keys.map(k => DECODES[k].title.replace(/"/g, '')).join(' | '));
             data.append('fields[decoder_level]', LEVEL_NAMES[level]);
             if (other) data.append('fields[decoder_other]', other);
+            data.append('fields[source]', visitSource);
             keys.forEach(k => { if (KIT_TAG_IDS[k]) data.append('tags[]', KIT_TAG_IDS[k]); });
             return fetch('https://app.kit.com/forms/' + KIT_FORM_ID + '/subscriptions', {
                 method: 'POST',
@@ -686,5 +710,6 @@
         });
     </script>
 
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f1845a5b92264659b5dd26aa97ae60e2"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
